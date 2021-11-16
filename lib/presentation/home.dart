@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan02/presentation/dashboard.dart';
+import 'package:latihan02/presentation/info.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -27,6 +28,18 @@ class Home extends StatelessWidget {
                   );
                 },
                 child: Text("Go to Dashboard"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Dashboard()) );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Info(firstInfo: "Info 1",),
+                    ),
+                  );
+                },
+                child: Text("Go to Info Page"),
               ),
             ],
           )
